@@ -48,7 +48,7 @@ cat aws_keys.yml
 
 
 # This playbook will launch and EC2 with specific configuration of VPC-Subnet-region with public IP enabled
-```ansible 
+```ansible
 ---
 - hosts: localhost
   connection: local
@@ -161,7 +161,7 @@ cat aws_keys.yml
               sudo tee /etc/systemd/system/nginx.service.d/override.conf
           sudo systemctl daemon-reload
           sudo systemctl restart nginx
-          ```
+```
  
           ### Configuring Mongodb
           # mongodb_setup.yml
@@ -219,7 +219,7 @@ cat aws_keys.yml
       - name: start mongodb
         become: true
         shell: systemctl start mongodb
-        ```
+```
 
         ### Configuring nodeapp and importing mongodb playbook
 
@@ -278,4 +278,4 @@ cat aws_keys.yml
 # This is where you enter the environment variable to tell the app where to look for the db
       DB_HOST: mongodb://ubuntu@<ENTER DB IP HERE>:27017/posts?authSource=admin
     become_user: root
-    ```
+```
